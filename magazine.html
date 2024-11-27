@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      
+    }
+    .title {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #73a959;
+      text-align: center; 
+      margin-top: 20px;
+    }
+    .menu {
+      font-size: 1.5em;
+      margin-top: 19px;
+      position: relative; 
+      top: 20px;
+      right:20px;
+      padding: 10px;
+      margin-left: 999px;   
+        
+    }
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 10px;
+      
+    }
+    
+    .menu a.active {
+        text-decoration: underline; 
+        color: #73a959; 
+        font-weight: bold; 
+    }
+    .menu a:hover {
+      color: #73a959; 
+    }
+    .vertical-text {
+      position: absolute;
+      top: 26%;
+      left: 20px;
+      transform: translateY(-50%) rotate(-90deg); 
+      transform-origin: left top; 
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: 0.1em;
+    }
+
+    .vertical-text:hover {
+      color: #73a959; 
+    }
+    .inline {
+      display: inline-flex;
+      align-items: normal; 
+    }
+    .inline img {
+      margin-left: 7px;
+    }
+    .bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+.justify-content-around {
+    justify-content: space-around !important;
+}
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+.flex-row {
+    flex-direction: row !important;
+}
+.d-flex {
+    display: flex !important;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ol, ul {
+    padding-left: 2rem;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: #ffffff;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+#submit-button {
+        background-color: #73a959;
+        border: none;
+        color: white;
+}
+.product-card img {
+            width: 100%;
+            height: auto;
+}
+.product-card {
+            border: 1px solid ;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="vertical-text">Panorama</a>
+    
+    <div class="menu">
+        <a href="index.html">О нас</a>
+        <span class="inline">
+          <a href="podborka.html" class="active">Подборка</a> <a href="podborka.html"><img height="20px" src="icon.jpg"></a>
+        </span>
+        <a href="index.html#feedback">Отзывы</a>
+        <a href="https://hd.kinopoisk.ru/">Платформа</a>
+        <a href="kabinet.html">Личный кабинет</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="magazine.html" class="active">Магазин</a>
+        
+    </div>
+
+<h2 class="title">Заказать фильмы для просмотра дома</h2>
+
+<div class="container mt-4">
+    <h5 class="text-center mb-4">Магазин</h5>
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <input name="q" type="hidden" value="search">
+        <ul class="d-flex flex-row justify-content-around flex-wrap bg-light" id="node_for_insert">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        
+        <div class="col">
+            <div class="product-card">
+                <img src="Джентльмены.jpg" alt="Товар 1">
+                <h5 class="card-title">Фильм 1</h5>
+                <p class="card-text">Джентльмены. Цена 300 р.</p>
+                <input type="hidden" name="vendor_code" value="111">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="crazy-stupid-love.jpg" alt="Товар 2">
+                <h5 class="card-title">Фильм 2</h5>
+                <p class="card-text">Эта дурацкая любовь. Цена 200 р.</p>
+                <input type="hidden" name="vendor_code" value="222">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="красотка.webp" alt="Товар 3">
+                <h5 class="card-title">Фильм 3</h5>
+                <p class="card-text">Красотка. Цена 300 р.</p>
+                <input type="hidden" name="vendor_code" value="333">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="грязныетанцы.jpg" alt="Товар 4">
+                <h5 class="card-title">Фильм 4</h5>
+                <p class="card-text">Грязные танцы. Цена 200 р.</p>
+                <input type="hidden" name="vendor_code" value="444e">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="Ещё_по_одной.jpg" alt="Товар 5">
+                <h5 class="card-title">Фильм 5</h5>
+                <p class="card-text">Еще по одной. Цена 100 р.</p>
+                <input type="hidden" name="vendor_code" value="4445e">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="танцующаявтменоте.webp" alt="Товар 6">
+                <h5 class="card-title">Фильм 6</h5>
+                <p class="card-text">Танцующая в темноте. Цена 300 р.</p>
+                <input type="hidden" name="vendor_code" value="666">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="сталкер.jpg" alt="Товар 7">
+                <h5 class="card-title">Фильм 7</h5>
+                <p class="card-text">Сталкер. Цена 300 р.</p>
+                <input type="hidden" name="vendor_code" value="777">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="талантливый.jpg" alt="Товар 8">
+                <h5 class="card-title">Фильм 8</h5>
+                <p class="card-text">Талантливый Мистер Рипли. Цена 150 р.</p>
+                <input type="hidden" name="vendor_code" value="888">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+
+            <div class="text-center mt-3">
+                <button id="submit-button" class="btn btn-primary" >Отправить</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-card">
+                <img src="клуб покупателей.jpg" alt="Товар 9">
+                <h5 class="card-title">Фильм 9</h5>
+                <p class="card-text">Далласский клуб покупателей. Цена 120 р.</p>
+                <input type="hidden" name="vendor_code" value="999">
+                <p>Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bootstrap.bundle.min.js"></script>
+<script src="button.js"></script>
+</body>
+</html>
